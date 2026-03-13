@@ -1,0 +1,204 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.quiz-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    max-width: 700px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    padding: 15px 20px;
+    border-radius: 50px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: #333;
+}
+
+.question-number {
+    background-color: #4a5568;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 25px;
+}
+
+.score {
+    background-color: #48bb78;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 25px;
+}
+
+.question-box {
+    background-color: #edf2f7;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #2d3748;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.options-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.option-btn {
+    background-color: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 15px 20px;
+    font-size: 1em;
+    font-weight: 500;
+    color: #2d3748;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.option-btn:hover:not(:disabled) {
+    background-color: #f7fafc;
+    border-color: #667eea;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.option-btn.correct {
+    background-color: #c6f6d5;
+    border-color: #38a169;
+    color: #22543d;
+}
+
+.option-btn.wrong {
+    background-color: #fed7d7;
+    border-color: #e53e3e;
+    color: #742a2a;
+}
+
+.option-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.feedback {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    min-height: 60px;
+}
+
+.next-btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+#next-btn, #restart-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 50px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#next-btn:hover:not(:disabled), #restart-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+}
+
+#next-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: #a0aec0;
+    box-shadow: none;
+}
+
+.result-box {
+    text-align: center;
+    background-color: #f0f4f8;
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.result-box h2 {
+    color: #4a5568;
+    margin-bottom: 15px;
+}
+
+.result-box p {
+    font-size: 1.3em;
+    color: #2d3748;
+    margin-bottom: 25px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .quiz-container {
+        padding: 20px;
+    }
+
+    .options-box {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .quiz-header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        border-radius: 20px;
+    }
+}
