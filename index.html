@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.Tech CS Core Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>🧑‍💻 B.Tech Computer Science Quiz</h1>
+        <p class="subtitle">Test your knowledge on Core Subjects</p>
+
+        <!-- Quiz Stats -->
+        <div class="quiz-header">
+            <div class="question-number">
+                Question <span id="current-question">1</span> of <span id="total-questions">5</span>
+            </div>
+            <div class="score">Score: <span id="score">0</span></div>
+        </div>
+
+        <!-- Question Box -->
+        <div class="question-box">
+            <p id="question-text">Loading question...</p>
+        </div>
+
+        <!-- Options Box -->
+        <div class="options-box" id="options-box">
+            <!-- Options will be injected here by JavaScript -->
+        </div>
+
+        <!-- Feedback Message -->
+        <div id="feedback" class="feedback"></div>
+
+        <!-- Next Button -->
+        <div class="next-btn-container">
+            <button id="next-btn" disabled>Next Question</button>
+        </div>
+
+        <!-- Result Box (Initially Hidden) -->
+        <div class="result-box" id="result-box" style="display: none;">
+            <h2>🎉 Quiz Completed! 🎉</h2>
+            <p>Your final score: <span id="final-score"></span> / <span id="final-total"></span></p>
+            <button id="restart-btn">Restart Quiz</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
